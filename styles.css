@@ -1,0 +1,117 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+  color: #FEF2BF;
+  line-height: 1..5;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 3% 5%; 
+}
+
+.title{
+  margin: 5% 3% 3% 3%; 
+  display:none;
+}
+
+h2{
+  margin: 0;
+  display: inline-block;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.container {
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 20px;
+  display: inline-block;
+  height: 190px;
+  width: 190px;
+  /* border: 10px solid black; */
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+  border-radius: 0 100% 0 0;
+  box-shadow: inset 0px 0px 27px 20px #680c13;
+}
+
+.green {
+  background-color: green;
+  border-radius: 100% 0 0 0;
+  box-shadow: inset 0px 0px 27px 20px #073b2a;
+
+   /* 0px 0px 0px 10px white; */
+}
+
+.blue {
+  background-color: blue;
+  border-radius: 0 0 100% 0;
+  box-shadow: inset 0px 0px 27px 20px rgb(10, 10, 88);
+}
+
+.yellow {
+  background-color: yellow;
+  border-radius:0 0 0 100%;
+  box-shadow: inset 0px 0px 27px 20px  rgb(104, 104, 15);
+}
+
+.pressed {
+  box-shadow: 0px 0px 15px 0.5px white, 0px 0px 25px 0.5px rgb(179, 142, 142);
+}
+
+.center{
+  background-color: #011F3F;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+.center p{
+  color: #FEF2BF;
+  font-size: 1.2rem;
+  font-family: 'Press Start 2P', cursive;
+  margin: 45.5% 0;
+  position: relative;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 1;
+}
+
+
+/***************************   MEDIA QUERIES     ************************/
+
+@media only screen and (max-width: 760px) {
+  h1{
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 1rem;
+  }
+
+}
+
