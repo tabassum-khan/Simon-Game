@@ -37,9 +37,24 @@ function nextSequence() {
     var rand = Math.floor(Math.random() * 4);
     var randomChosenColour = buttonColors[rand];
 
-    gamePattern.push(randomChosenColour);
-    playSound(randomChosenColour);
-    flash(randomChosenColour);
+    if (gamePattern.length === 0){
+        setTimeout(function (){
+            console.log("Inside setTimeout function");
+
+            gamePattern.push(randomChosenColour);
+            playSound(randomChosenColour);
+
+            flash(randomChosenColour);
+            
+        }, 1000);
+    }
+    else{
+        gamePattern.push(randomChosenColour);
+        playSound(randomChosenColour);
+        
+        flash(randomChosenColour);
+    }
+    
     changeText("PLAY");
     
     console.log("Game Pattern: " + gamePattern);
