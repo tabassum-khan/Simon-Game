@@ -39,11 +39,9 @@ function nextSequence() {
 
     if (gamePattern.length === 0){
         setTimeout(function (){
-            console.log("Inside setTimeout function");
 
             gamePattern.push(randomChosenColour);
             playSound(randomChosenColour);
-
             flash(randomChosenColour);
             
         }, 1000);
@@ -51,10 +49,9 @@ function nextSequence() {
     else{
         gamePattern.push(randomChosenColour);
         playSound(randomChosenColour);
-        
         flash(randomChosenColour);
     }
-    
+
     changeText("PLAY");
     
     console.log("Game Pattern: " + gamePattern);
