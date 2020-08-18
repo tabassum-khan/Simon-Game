@@ -8,10 +8,32 @@ var level = 0;
 var score = 0;
 var hs = 0;
 
-$(document).keypress(function () {
+//To start the game either press key or click in mobile
 
-    console.log("ON keypress");
+let mql = window.matchMedia("(max-width:760px)"); //to detect the width of the media
 
+if (mql.matches){
+    $("h1").text("Click in the center to start!");
+
+    $(".center p").on("click touch", function(){
+        
+        console.log("In the mobile version");
+        startGame();
+
+    });
+}
+else{
+    $("h1").text("Press any key to start!");
+
+    $(document).keypress(function () {
+
+        console.log("In Desktop Version");
+        startGame();
+    
+    });
+}
+
+function startGame(){
     if (!start){
         
         $('h1').css("display", "none");
@@ -22,8 +44,7 @@ $(document).keypress(function () {
 
         start = true;
     }
-
-});
+}
 
 
 function nextSequence() {
@@ -37,25 +58,25 @@ function nextSequence() {
     var rand = Math.floor(Math.random() * 4);
     var randomChosenColour = buttonColors[rand];
 
+    //If Game has just started wait for 1000ms else continue
     if (gamePattern.length === 0){
         setTimeout(function (){
-
-            gamePattern.push(randomChosenColour);
-            playSound(randomChosenColour);
-            flash(randomChosenColour);
-            
+            playGame(randomChosenColour);
         }, 1000);
     }
     else{
-        gamePattern.push(randomChosenColour);
-        playSound(randomChosenColour);
-        flash(randomChosenColour);
+       playGame();
     }
-
-    changeText("PLAY");
     
     console.log("Game Pattern: " + gamePattern);
 
+}
+
+function playGame(randomChosenColour){
+    gamePattern.push(randomChosenColour);
+    playSound(randomChosenColour);
+    flash(randomChosenColour);
+    changeText("PLAY");
 }
 
 $('.btn').click(function () {
@@ -117,7 +138,10 @@ function gameOver(){
     $('.level').text("Final Score: " + score);
     $('.score').text("Highest Score: " + hs);
     $('h1').css("display", "block"); 
-    $('h1').text("Game Over! Press any key to Restart");
+    if (mql.matches)
+        $('h1').text("Game Over! Press in the center to Restart!");
+    else
+        $('h1').text("Game Over! Press any key to Restart");
     $('.center p').text("SIMON");
 
     startOver();

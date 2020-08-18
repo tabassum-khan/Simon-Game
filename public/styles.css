@@ -87,6 +87,7 @@ h2{
   top: 50%;
   margin-top: -100px;
   margin-left: -100px;
+  cursor: pointer;
 }
 
 .center p{
@@ -106,12 +107,29 @@ h2{
 /***************************   MEDIA QUERIES     ************************/
 
 @media only screen and (max-width: 760px) {
+
   h1{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
+  
   h2{
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
+  .btn{
+    height: 350px;
+    width: 350px;
+  }
+
+  .center{
+    height: 320px;
+    width: 320px;
+    margin-top: -160px;
+    margin-left: -160px;
+  }
+
+  .center p{
+    font-size: 1.8rem;
+  }
 }
 
