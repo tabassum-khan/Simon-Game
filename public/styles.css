@@ -108,28 +108,36 @@ h2{
 
 @media screen and (max-width: 760px) {
 
+  .container-fluid{
+    position: absolute;
+    top: 50%;
+    margin-top: -50%;
+  }
+
   h1{
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
   }
   
   h2{
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .btn{
-    height: 350px;
-    width: 350px;
+    height: 135px;
+    width: 135px;
   }
 
   .center{
-    height: 320px;
-    width: 320px;
-    margin-top: -160px;
-    margin-left: -160px;
+    height: 140px;
+    width: 140px;
+    margin-top: -70px;
+    margin-left: -70px;
   }
 
   .center p{
-    font-size: 1.8rem;
+    font-size: 0.9rem;
   }
 }
 
