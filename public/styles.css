@@ -106,7 +106,7 @@ h2{
 
 /***************************   MEDIA QUERIES     ************************/
 
-@media only screen and (max-width: 760px) {
+@media screen and (max-width: 760px) {
 
   h1{
     font-size: 1.8rem;

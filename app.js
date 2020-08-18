@@ -9,7 +9,7 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/index.html");
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 //setting up server to listen to the port
 let server = app.listen(PORT, function(){

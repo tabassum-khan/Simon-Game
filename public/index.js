@@ -13,7 +13,7 @@ var hs = 0;
 let mql = window.matchMedia("(max-width:760px)"); //to detect the width of the media
 
 if (mql.matches){
-    $("h1").text("Click in the center to start!");
+    $("h1").text("Click on Simon to start!");
 
     $(".center p").on("click touch", function(){
         
@@ -56,7 +56,7 @@ function nextSequence() {
     $('.level').text("Level: " + ++level);
    
     var rand = Math.floor(Math.random() * 4);
-    var randomChosenColour = buttonColors[rand];
+    let randomChosenColour = buttonColors[rand];
 
     //If Game has just started wait for 1000ms else continue
     if (gamePattern.length === 0){
@@ -65,7 +65,7 @@ function nextSequence() {
         }, 1000);
     }
     else{
-       playGame();
+       playGame(randomChosenColour);
     }
     
     console.log("Game Pattern: " + gamePattern);
@@ -139,7 +139,7 @@ function gameOver(){
     $('.score').text("Highest Score: " + hs);
     $('h1').css("display", "block"); 
     if (mql.matches)
-        $('h1').text("Game Over! Press in the center to Restart!");
+        $('h1').text("Game Over! Click on Simon to Restart!");
     else
         $('h1').text("Game Over! Press any key to Restart");
     $('.center p').text("SIMON");
