@@ -142,6 +142,8 @@ function gameOver(){
         $('h1').text("Game Over! Click on Simon to Restart!");
     else
         $('h1').text("Game Over! Press any key to Restart");
+
+    $(".title").css("margin-top", "7%");
     $('.center p').text("SIMON");
 
     startOver();
