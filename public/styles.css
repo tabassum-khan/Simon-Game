@@ -4,6 +4,7 @@ body {
   font-family: 'Press Start 2P', cursive;
   color: #FEF2BF;
   line-height: 1..5;
+  margin: 0;
 }
 
 h1 {
@@ -108,10 +109,12 @@ h2{
 
 @media screen and (max-width: 760px) {
 
-  .container-fluid{
+  .box{
     position: absolute;
     top: 50%;
     margin-top: -50%;
+    left: 0;
+    right: 0;
   }
 
   h1{
