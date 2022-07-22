@@ -29,5 +29,9 @@ Simon Game were designed to always be harmonic, no matter the sequence. The note
 
 ## Download and Usage
 
-- Download the zip or clone the project.
-- Run the index.html page
+1. Download the zip or clone the project.
+2. Go to the terminal:
+**```npm install```** - installs all the dependencies (NodeJS is required).
+3. Run the project:
+**```node app.js```**    
+4. Go to the browser and type: **```localhost:3000```** to run the application.
